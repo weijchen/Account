@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="bogoAccount">
+   
+<head>
+	<title>Signup</title>
+	<link rel='stylesheet' href='stylesheets/style.css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="core.js"></script>
+    <style>
+		html{ 
+		  background: url(images/login2.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+	</style>
+</head>
+
+<body ng-controller="mainController">
+
+
+	<header>
+		<h1 class="text-center" style="font-family: cursive;"><span class="fa fa-sign-in"></span> Signup</h1>
+	</header>
+
+	<main>
+		<form class="col-sm-4 col-sm-offset-4" action="/signup" method="POST">
+		<% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    	<% } %>
+			<div class="form-group">
+				<label>Username</label>
+				<input class="form-control" type="text" id="username" placeholder="Enter" name="text">
+			</div>
+			<div class="form-group">
+			<label>Password</label>
+				<input class="form-control" type="password" id="password" placeholder="Enter" name="password">
+			</div>
+			<button class="btn btn-danger btn-sm text-center col-sm-offset-5" type="submit"><span class="glyphicon glyphicon-send"></span> Submit</button>
+			<button class="btn btn-primary btn-sm text-center" type="reset">Reset</button>
+			<a href="/" class="btn btn-primary btn-sm text-center"><span class="fa fa-home"></span> Back</a>
+		</form>
+ <!-- id="sign" ng-click="createAccount()" -->
+
+	</main>
+
+	<footer id='footer'>
+		<ul class="copyright text-right">&copy; <a href="http://weijchen.github.io/blog/">JimmyC</a></ul>
+	</footer>
+</body>
+	<script type="text/javascript" src="javascripts/main.js"></script>
+</html>

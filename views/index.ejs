@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="bogoAccount">
+   
+<head>
+	<title>Login</title>
+	<link rel='stylesheet' href='stylesheets/style.css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="core.js"></script>
+    <style>
+		html{ 
+		  background: url(images/login2.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+	</style>
+</head>
+
+<body ng-controller="mainController">
+	<header>
+		<h1 class="text-center" style="font-family: cursive;">Want to have an aventure?</h1>
+	</header>
+
+	<main>
+		<form class="col-sm-4 col-sm-offset-4">
+			<div class="row">
+				<a href="/login" class="btn btn-info btn-default col-lg-4" type="submit" style="font-family: Optima;">Login</a>
+				<a href="/signup" class="btn btn-warning btn-default col-lg-4 col-lg-offset-4" type="submit" style="font-family: Optima;">Signup</a>
+			</div>
+		</form>
+ <!-- id="sign" ng-click="createAccount()" -->
+
+	</main>
+
+	<footer id='footer'>
+		<ul class="copyright text-right">&copy; <a href="http://weijchen.github.io/blog/">JimmyC</a></ul>
+	</footer>
+</body>
+	<script type="text/javascript" src="javascripts/main.js"></script>
+</html>
