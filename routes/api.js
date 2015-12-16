@@ -14,17 +14,17 @@ router.get('/', function(req, res, next) {
 
 // api ---------------------------------------------------------------------
 // get all accounts
-router.get('/accounts', function(req, res) {
-    // use mongoose to get all accounts in the database
-    Account.find(function(err, account) {
+// router.get('/accounts', function(req, res) {
+//     // use mongoose to get all accounts in the database
+//     Account.find(function(err, account) {
 
-        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
-        if (err)
-            res.send(err)
+//         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+//         if (err)
+//             res.send(err)
 
-        res.json(account); // return all accounts in JSON format
-    });
-});
+//         res.json(account); // return all accounts in JSON format
+//     });
+// });
 
 // create account and send back all accounts after creation
 router.post('/accounts', function(req, res) {
