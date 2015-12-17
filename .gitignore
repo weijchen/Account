@@ -1,0 +1,4 @@
+config/auth.js
+node_modules
+
+// routes/*.js -> all .js documents will be choose

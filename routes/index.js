@@ -41,6 +41,24 @@ var passport = require('passport');
 		req.logout('');
 		res.redirect('/');
 	});
+// =====================================
+// FACEBOOK ROUTES =====================
+// =====================================
+	// route for facebook authentication and login
+	router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' })); //scope is the informations returned by fb
+
+	// handle the callback after facebook has authenticated the user
+	router.get('/auth/facebook/callback',
+	    passport.authenticate('facebook', {
+	        successRedirect : '/profile',
+	        failureRedirect : '/'
+	    }));
+
+	// route for logging out
+	router.get('/logout', function(req, res) {
+	    req.logout();
+	    res.redirect('/');
+	});
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {

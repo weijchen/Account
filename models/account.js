@@ -13,7 +13,12 @@ var bcrypt   = require('bcrypt-nodejs'); //密碼加密功能
 var accountSchema = mongoose.Schema({
 	username: String,
     password : String,
-    done : Boolean
+    facebook: {
+    	id: String,
+    	token: String,
+    	name: String,
+    	email: String
+    } 
 });
 
 // generating a hash
