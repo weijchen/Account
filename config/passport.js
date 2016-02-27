@@ -8,7 +8,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var Account = require('../models/account');
 
 // load the auth variables
-var configAuth = require('./auth'); // use this one for testing
+var configAuth = require('./env'); // use this one for testing
 
 module.exports = function(passport) {
 
